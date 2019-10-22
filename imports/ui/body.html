@@ -1,0 +1,87 @@
+<body>
+  <div class="container">
+    <header>
+      <img src="submit-header.png" alt="" class="crook">
+    </header>
+    <br>
+
+    <!-- <button class="bulkDelete">Bulk Delete</button> -->
+    <!-- <label class="hide-completed">
+        <input type="checkbox" />
+        Bulk Delete Checked EITs
+    </label> -->
+
+    <!-- <button type="button" name="button" value="Bulk Delete" class="bulkDelete">Bulk Delete</button> -->
+
+    <br>
+
+    <div class="form-style-5">
+    <form class="new-eit">
+    <fieldset>
+    <legend><span class="number">1</span> Add EIT</legend>
+     <input type="hidden" id="myHidden" name="custId">
+    <input type="text" id="name" name="name" placeholder="Enter Name *">
+    <input type="email" id= "email" name="email" placeholder="Enter Email *">
+    <input type="text" id = "country" name="country" placeholder="Enter Country *">
+    <input type="text" id = "phone" name="phone" placeholder="Enter Phone No *">
+
+
+    </fieldset>
+
+    <input type="submit" value="Submit" />
+
+    </form>
+    </div>
+
+    <input type="button" value="Bulk Delete" class="bulkDelete" />
+
+    <!-- <form class="new-eit">
+
+    <label class="eit-name">
+        <input type="text" name="name"  />
+        Name
+      </label>
+
+      <label class="eit-email">
+          <input type="text" name="email"  />
+          Email
+        </label>
+
+        <label class="country">
+            <input type="text" name="country"  />
+            Country
+          </label>
+
+          <label class="age">
+              <input type="text" name="age"  />
+              Age
+          </label>
+
+          <button class="submit" type = "submit">Submit</button>
+
+
+        <input type="text" name="text" placeholder="Type to add new EIT" />
+      </form> -->
+    <br>
+
+    <table id = "customers">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Phone No</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each eitObject }}
+          {{> eitTemplate}}
+        {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+</body>
