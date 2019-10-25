@@ -1,11 +1,11 @@
-<template name="eitTemplate">
+<template name="eitRow">
   <tr>
     <td><input type="checkbox" checked="{{checked}}" class="toggle-checked" /></td>
     <td>{{eitName}}</td>
     <td>{{eitEmail}}</td>
     <td>{{eitCountry}}</td>
     <td>{{eitPhone}}</td>
-    <td><button class="editButton"><img src="pencil-edit-button.png" alt="" width="20px" height="20px"></button></td>
+    <td><a href="/edit/{{_id}}"><button class="editButton"><img src="pencil-edit-button.png" alt="" width="20px" height="20px"></button></a></td>
     <td><button class="delete"><img src="x-button.png" alt="" width="20px" height="20px"></button></td>
   </tr>
   <!-- <li class="{{#if checked}}checked{{/if}}">

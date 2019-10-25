@@ -1,0 +1,28 @@
+<template name="home">
+
+
+<a href="/add"><input type="button" value="Add EIT" class="addEIT" /></a>
+<input type="button" value="Bulk Delete" class="bulkDelete" />
+
+<br>
+
+<table id = "customers">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Country</th>
+      <th>Phone No</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each eitObject }}
+      {{> eitRow}}
+    {{/each}}
+  </tbody>
+</table>
+
+</template>
