@@ -8,6 +8,7 @@ import '../html/home.html';
 
 Template.home.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
+
 });
 
 
@@ -36,7 +37,8 @@ Template.home.events({
   'click .bulkDelete'(event, instance) {
     // instance.state.set('deleteAll', event.target.clicked);
     const fetcher = Eits.find({checked: {$eq: true}}).fetch();
-    fetcher.forEach(item => Eits.remove(item._id));
+    Meteor.call('deleteChecked', fetcher);
+
     // console.log(fetcher);
 
 
